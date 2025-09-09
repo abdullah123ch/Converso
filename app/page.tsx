@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import CompaionCard from '@/components/CompaionCard'
 import CTA from '@/components/CTA'
 import CompanionList from '@/components/CompanionList'
+import { recentSessions } from '@/constants'
 
 const Page = () => {
   return (
@@ -35,7 +36,7 @@ const Page = () => {
         />
        </section>
        <section className='home-section'>
-         <CompanionList />
+         <CompanionList title='Recently Completed Sessions' companions={recentSessions} />
          <CTA />
        </section>
     </main>
