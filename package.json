@@ -8,6 +8,10 @@
     "start": "next start",
     "lint": "eslint"
   },
+  "overrides": {
+    "@clerk/nextjs": "^6.31.10",
+    "debug": "^4.3.4"
+  },
   "dependencies": {
     "@clerk/nextjs": "^6.31.10",
     "@hookform/resolvers": "^5.2.1",
