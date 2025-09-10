@@ -8,7 +8,7 @@ const navitems = [
     {name: "Home", href: "/"},
     {name: "Companions", href: "/companions"},
     {name: "My Journey", href: "my-journey"},
-    {name: "Pricing", href: "/pricing"},
+    {name: "Pricing", href: "/subscription"},
 ]
 
 const Navitems = () => {

@@ -23,7 +23,8 @@ import {
 } from "@/components/ui/select"
 import {subjects} from "@/constants";
 import {Textarea} from "@/components/ui/textarea";
-import {redirect} from "next/navigation";
+import { useRouter } from "next/navigation";
+import { useCompanions } from "@/context/CompanoinContext";
 
 const formSchema = z.object({
     name: z.string().min(1, { message: 'Companion is required.'}),
@@ -46,11 +47,13 @@ const CompanionForm = () => {
             duration: 15,
         },
     })
-
-    const onSubmit = async (values: z.infer<typeof formSchema>) => {
-        console.log(values);
-    }
-
+    const { addCompanion } = useCompanions()
+    const router = useRouter()
+    
+    const onSubmit = (values: z.infer<typeof formSchema>) => {
+        addCompanion(values)        // save in global context
+        router.push("/companions")  // navigate to list page
+      }
     return (
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
