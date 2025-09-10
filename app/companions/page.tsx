@@ -40,7 +40,7 @@ const Companions = () => {
           {companions.map((companion, index) => (
             <CompaionCard
               key={index}
-              id={companion.id}
+              id={companion?.id}
               name={companion.name}
               topic={companion.topic}
               subject={companion.subject}

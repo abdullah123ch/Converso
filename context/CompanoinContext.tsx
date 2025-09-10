@@ -4,6 +4,7 @@ import { createContext, useContext, useState, ReactNode } from "react"
 
 // Define the shape of a companion
 type Companion = {
+  id: string
   name: string
   subject: string
   topic: string
